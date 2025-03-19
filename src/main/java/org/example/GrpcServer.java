@@ -41,10 +41,10 @@ public class GrpcServer {
           return;
         }
       } else {
-        System.out.println("⚠️ No deadline received, proceeding normally...");
+        System.out.println("No deadline received, proceeding normally...");
       }
 
-      // ✅ Process and send response
+      //Process and send response
       String message = "Hello, " + request.getName();
       HelloReply reply = HelloReply.newBuilder().setMessage(message).build();
       responseObserver.onNext(reply);
