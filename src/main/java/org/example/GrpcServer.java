@@ -11,8 +11,8 @@ import org.example.grpc.HelloRequest;
 public class GrpcServer {
   public static void main(String[] args) throws IOException, InterruptedException {
     Server server = ServerBuilder.forPort(50051)
-        .addService(new GreeterServiceImpl()) // Add Service Implementation
-        .intercept(new DeadlineInterceptor()) // Attach Deadline Interceptor
+        .addService(new GreeterServiceImpl()) // Added Service Implementation
+        .intercept(new DeadlineInterceptor()) // Attached Deadline Interceptor
         .build()
         .start();
 

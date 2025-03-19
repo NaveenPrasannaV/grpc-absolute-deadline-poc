@@ -16,7 +16,7 @@ public class GrpcClient {
         .usePlaintext()
         .build();
 
-    // Set absolute deadline: Modify here (5 min ahead OR 10 min back)
+    // Set absolute deadline: Modify (5 min ahead OR 10 min back)
     Instant deadlineInstant = Instant.now().plus(5, ChronoUnit.MINUTES);  // Change to `.minus()` for -10 min
     String deadlineString = deadlineInstant.toString();
 
